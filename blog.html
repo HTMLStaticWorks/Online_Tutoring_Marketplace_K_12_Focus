@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - K-12 Online Tutoring</title>
+    <meta name="description" content="Read our latest tips, news, and insights on K-12 education.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container navbar-inner"
+            style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;">
+            <div class="logo">
+                <a href="index.html"
+                    style="font-size: 1.75rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 0.5rem;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        style="width: 32px; height: 32px; color: var(--secondary);">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                    Tutor<span style="color: var(--text-primary)">Market</span>
+                </a>
+            </div>
+
+            <ul class="nav-links">
+                <li class="dropdown" style="position: relative;">
+                    <a href="javascript:void(0)" class="dropdown-toggle" style="display: flex; align-items: center; gap: 4px;">
+                        Home <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a>
+                    <ul class="dropdown-menu" style="position: absolute; top: 100%; left: 0; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 0.5rem 0; min-width: 150px; display: none; flex-direction: column; gap: 0.5rem; box-shadow: var(--shadow-hover);">
+                        <li><a href="index.html" style="display: block; padding: 0.5rem 1.5rem;">Home 1</a></li>
+                        <li><a href="home-2.html" style="display: block; padding: 0.5rem 1.5rem;">Home 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="subjects.html">Subjects</a></li>
+                <li><a href="tutors.html">Tutors</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                
+                
+                
+                <li class="mobile-action-row mobile-only" style="flex-direction: column; gap: 1rem; align-items: center; width: 100%; margin-top: 1rem;">
+                    <div style="display: flex; gap: 1.5rem; justify-content: center; align-items: center; width: 100%;">
+                        <a href="dashboard.html" class="btn-icon-only" aria-label="Dashboard">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px;"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                        </a>
+                        <button class="btn-icon-only dark-mode-toggle" aria-label="Dark Mode">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        </button>
+                        <button class="btn-icon-only rtl-toggle" aria-label="Toggle RTL">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px;">
+                                <path d="M14 4l4 4-4 4"></path><path d="M18 8H4"></path><path d="M10 20l-4-4 4-4"></path><path d="M6 16h14"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <a href="register.html" class="btn btn-primary mobile-signup" style="width: 80%; text-align: center;">Sign Up</a>
+                </li>
+            </ul>
+
+            <div class="nav-actions" style="display: flex; gap: 1rem; align-items: center;">
+                <button id="darkModeToggle" class="btn-icon-only"
+                    style="background: transparent; border: none; cursor: pointer; color: var(--text-primary);"
+                    aria-label="Dark Mode">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        style="width: 24px; height: 24px;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <a href="dashboard.html" class="btn-icon-only"
+                    style="background: transparent; border: none; cursor: pointer; color: var(--text-primary); display: flex; align-items: center; justify-content: center;"
+                    aria-label="Dashboard">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" style="width: 24px; height: 24px;">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                </a>
+                <button id="rtlToggle" class="btn-icon-only"
+                    style="background: transparent; border: none; cursor: pointer; color: var(--text-primary);"
+                    aria-label="Toggle RTL">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"
+                        style="width: 24px; height: 24px;">
+                        <path d="M14 4l4 4-4 4"></path>
+                        <path d="M18 8H4"></path>
+                        <path d="M10 20l-4-4 4-4"></path>
+                        <path d="M6 16h14"></path>
+                    </svg>
+                </button>
+                <a href="register.html" class="btn btn-primary desktop-signup" style="padding: 0.6rem 1.5rem; font-size: 1rem;">Sign
+                    Up</a>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 24px; height: 24px;">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: HERO -->
+    <header class="hero section-alt" style="padding: 8rem 0; text-align: center;">
+        <div class="container reveal">
+            <h1 style="font-size: clamp(36px, 5vw, 54px); margin-bottom: 1rem;">Educational <span
+                    class="text-gradient">Insights</span></h1>
+            <p style="max-width: 600px; margin: 0 auto;">Read our latest articles on helping your child succeed.</p>
+        </div>
+    </header>
+
+    <!-- SECTION 2: FEATURED POST -->
+    <section class="featured-post" style="padding: 6rem 0;">
+        <div class="container">
+            <div class="card reveal"
+                style="display: flex; gap: 2rem; align-items: center; padding: 0; overflow: hidden; box-shadow: var(--shadow-md);">
+                <div style="flex: 1; height: 100%; min-height: 350px;">
+                    <img src="assets/images/blog1.jpg" alt="Featured Blog"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="flex: 1; padding: 3rem;">
+                    <div class="badge badge-primary" style="margin-bottom: 1rem;">Featured</div>
+                    <h2 style="font-size: 2rem; margin-bottom: 1rem;">10 Ways to Help Your Child with Math Anxiety</h2>
+                    <p
+                        style="margin-bottom: 1.5rem; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6;">
+                        Discover practical strategies to build confidence in math, reduce test stress, and foster a
+                        lifelong love for problem-solving in everyday life.</p>
+                    <a href="#" class="btn btn-outline">Read Full Article</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: RECENT POSTS -->
+    <section class="recent-posts section-alt" style="padding: 6rem 0;">
+        <div class="container">
+            <h2 class="reveal text-center">Recent Articles</h2>
+            <div class="grid" style="grid-template-columns: repeat(3, 1fr); margin-top: 3rem;">
+                <div class="card reveal"
+                    style="padding: 0; overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
+                    <img src="assets/images/blog2.jpg" alt="SATs"
+                        style="height: 220px; width: 100%; object-fit: cover;">
+                    <div style="padding: 1.5rem;">
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.25rem;">Preparing for the SATs</h3>
+                        <p style="color: var(--text-secondary);">A comprehensive timeline and study guide for high
+                            school success.</p>
+                    </div>
+                </div>
+                <div class="card reveal"
+                    style="padding: 0; overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
+                    <img src="assets/images/blog3.jpg" alt="Coding"
+                        style="height: 220px; width: 100%; object-fit: cover;">
+                    <div style="padding: 1.5rem;">
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.25rem;">Why Kids Should Code</h3>
+                        <p style="color: var(--text-secondary);">The cognitive and creative benefits of early STEM
+                            education.</p>
+                    </div>
+                </div>
+                <div class="card reveal"
+                    style="padding: 0; overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
+                    <img src="assets/images/blog4.jpg" alt="Online Tutoring"
+                        style="height: 220px; width: 100%; object-fit: cover;">
+                    <div style="padding: 1.5rem;">
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.25rem;">Online vs In-Person</h3>
+                        <p style="color: var(--text-secondary);">Which modern tutoring method is the right choice for
+                            your child?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3.5: CATEGORIES -->
+    <section class="categories" style="padding: 6rem 0;">
+        <div class="container">
+            <h2 class="reveal text-center">Browse by Category</h2>
+            <div class="grid" style="grid-template-columns: repeat(4, 1fr); margin-top: 3rem;">
+                <a href="#" class="card reveal text-center hover-lift"
+                    style="display: block; transition: var(--transition-normal); box-shadow: var(--shadow-sm);">
+                    <h3 style="margin: 0; font-size: 1.25rem; color: var(--primary);">Math Tips</h3>
+                    <p style="color: var(--text-secondary); margin: 0.5rem 0 0 0; font-size: 0.9rem;">12 Articles</p>
+                </a>
+                <a href="#" class="card reveal text-center hover-lift"
+                    style="display: block; transition: var(--transition-normal); box-shadow: var(--shadow-sm);">
+                    <h3 style="margin: 0; font-size: 1.25rem; color: var(--secondary);">Exam Prep</h3>
+                    <p style="color: var(--text-secondary); margin: 0.5rem 0 0 0; font-size: 0.9rem;">8 Articles</p>
+                </a>
+                <a href="#" class="card reveal text-center hover-lift"
+                    style="display: block; transition: var(--transition-normal); box-shadow: var(--shadow-sm);">
+                    <h3 style="margin: 0; font-size: 1.25rem; color: var(--accent-1);">STEM Education</h3>
+                    <p style="color: var(--text-secondary); margin: 0.5rem 0 0 0; font-size: 0.9rem;">15 Articles</p>
+                </a>
+                <a href="#" class="card reveal text-center hover-lift"
+                    style="display: block; transition: var(--transition-normal); box-shadow: var(--shadow-sm);">
+                    <h3 style="margin: 0; font-size: 1.25rem; color: var(--accent-2);">Parenting</h3>
+                    <p style="color: var(--text-secondary); margin: 0.5rem 0 0 0; font-size: 0.9rem;">20 Articles</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: NEWSLETTER -->
+    <section class="newsletter" style="padding: 6rem 0; text-align: center; background-color: #ffffff;">
+        <div class="container reveal">
+            <h2 style="margin-bottom: 2rem;">Subscribe to Our Newsletter</h2>
+            <div style="display: flex; gap: 1rem; justify-content: center; max-width: 500px; margin: 0 auto;">
+                <input type="email" placeholder="Your Email Address"
+                    style="padding: 1rem; flex: 1; border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
+                <button class="btn btn-primary">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: FOOTER -->
+    <!-- FOOTER -->
+    <footer style="padding: 5rem 0 2rem; background: #FFF; border-top: 1px solid var(--border-color);">
+        <div class="container footer-grid">
+            <!-- Col 1 -->
+            <div class="footer-col">
+                <a href="index.html"
+                    style="font-size: 1.75rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        style="width: 32px; height: 32px; color: var(--secondary);">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                    Tutor<span style="color: var(--text-primary)">Market</span>
+                </a>
+                <p>The premium destination for connecting K-12 students with world-class tutors.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg></a>
+                    <a href="#" class="social-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                            </path>
+                        </svg></a>
+                    <a href="#" class="social-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg></a>
+                </div>
+            </div>
+            <!-- Col 2 -->
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="tutors.html">Our Tutors</a></li>
+                    <li><a href="blog.html">Blog & News</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- Col 3 -->
+            <div class="footer-col">
+                <h4>Subjects</h4>
+                <ul>
+                    <li><a href="subjects.html">Mathematics</a></li>
+                    <li><a href="subjects.html">Science</a></li>
+                    <li><a href="subjects.html">English Literature</a></li>
+                    <li><a href="subjects.html">Coding for Kids</a></li>
+                </ul>
+            </div>
+            <!-- Col 4 -->
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container"
+            style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+            <p style="margin: 0;">&copy; 2026 TutorMarket. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

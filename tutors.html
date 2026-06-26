@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Tutors - K-12 Online Tutoring Marketplace</title>
+    <meta name="description"
+        content="Connect with expert K-12 tutors, schedule flexible online lessons, and help every student achieve academic success.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container navbar-inner"
+            style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;">
+            <div class="logo">
+                <a href="index.html"
+                    style="font-size: 1.75rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 0.5rem;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        style="width: 32px; height: 32px; color: var(--secondary);">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                    Tutor<span style="color: var(--text-primary)">Market</span>
+                </a>
+            </div>
+
+            <ul class="nav-links">
+                <li class="dropdown" style="position: relative;">
+                    <a href="javascript:void(0)" class="dropdown-toggle"
+                        style="display: flex; align-items: center; gap: 4px;">
+                        Home <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            style="width: 16px; height: 16px;">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-menu"
+                        style="position: absolute; top: 100%; left: 0; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 0.5rem 0; min-width: 150px; display: none; flex-direction: column; gap: 0.5rem; box-shadow: var(--shadow-hover);">
+                        <li><a href="index.html" style="display: block; padding: 0.5rem 1.5rem;">Home 1</a></li>
+                        <li><a href="home-2.html" style="display: block; padding: 0.5rem 1.5rem;">Home 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="subjects.html">Subjects</a></li>
+                <li><a href="tutors.html" class="active">Tutors</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+
+
+                <li class="mobile-action-row mobile-only"
+                    style="flex-direction: column; gap: 1rem; align-items: center; width: 100%; margin-top: 1rem;">
+                    <div style="display: flex; gap: 1.5rem; justify-content: center; align-items: center; width: 100%;">
+                        <a href="dashboard.html" class="btn-icon-only" aria-label="Dashboard">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                style="width: 20px; height: 20px;">
+                                <rect x="3" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="14" width="7" height="7"></rect>
+                                <rect x="3" y="14" width="7" height="7"></rect>
+                            </svg>
+                        </a>
+                        <button class="btn-icon-only dark-mode-toggle" aria-label="Dark Mode">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                style="width: 20px; height: 20px;">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </button>
+                        <button class="btn-icon-only rtl-toggle" aria-label="Toggle RTL">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px;">
+                                <path d="M14 4l4 4-4 4"></path>
+                                <path d="M18 8H4"></path>
+                                <path d="M10 20l-4-4 4-4"></path>
+                                <path d="M6 16h14"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <a href="register.html" class="btn btn-primary mobile-signup"
+                        style="width: 80%; text-align: center;">Sign Up</a>
+                </li>
+            </ul>
+
+            <div class="nav-actions" style="display: flex; gap: 1rem; align-items: center;">
+                <button id="darkModeToggle" class="btn-icon-only"
+                    style="background: transparent; border: none; cursor: pointer; color: var(--text-primary);"
+                    aria-label="Dark Mode">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        style="width: 24px; height: 24px;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <a href="dashboard.html" class="btn-icon-only"
+                    style="background: transparent; border: none; cursor: pointer; color: var(--text-primary); display: flex; align-items: center; justify-content: center;"
+                    aria-label="Dashboard">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" style="width: 24px; height: 24px;">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                </a>
+                <button id="rtlToggle" class="btn-icon-only"
+                    style="background: transparent; border: none; cursor: pointer; color: var(--text-primary);"
+                    aria-label="Toggle RTL">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" style="width: 24px; height: 24px;">
+                        <path d="M14 4l4 4-4 4"></path>
+                        <path d="M18 8H4"></path>
+                        <path d="M10 20l-4-4 4-4"></path>
+                        <path d="M6 16h14"></path>
+                    </svg>
+                </button>
+                <a href="register.html" class="btn btn-primary desktop-signup"
+                    style="padding: 0.6rem 1.5rem; font-size: 1rem;">Sign Up</a>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        style="width: 24px; height: 24px;">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: HERO -->
+    <header class="hero section-alt" style="padding: 8rem 0; text-align: center;">
+        <div class="container reveal">
+            <h1 style="font-size: clamp(36px, 5vw, 54px); margin-bottom: 1rem;">Find Your Perfect <span
+                    class="text-gradient">Tutor</span></h1>
+            <p style="max-width: 600px; margin: 0 auto;">Browse our verified marketplace of top K-12 educators.</p>
+        </div>
+    </header>
+
+    <!-- SECTION 2: LISTINGS (Includes Sidebar) -->
+    <div class="container grid tutor-layout" style="grid-template-columns: 300px 1fr; gap: 2rem; padding: 4rem 5%;">
+
+        <!-- SIDEBAR FILTERS -->
+        <aside class="filters-sidebar card" style="align-self: start; position: sticky; top: 100px;">
+            <h3 style="margin-bottom: 1.5rem;">Filters</h3>
+
+            <div style="margin-bottom: 1.5rem;">
+                <label style="font-weight: 600; display: block; margin-bottom: 0.5rem;">Subject</label>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <label><input type="checkbox"> Mathematics</label>
+                    <label><input type="checkbox"> Science</label>
+                    <label><input type="checkbox"> English</label>
+                    <label><input type="checkbox"> Coding</label>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <label style="font-weight: 600; display: block; margin-bottom: 0.5rem;">Grade Level</label>
+                <select
+                    style="width: 100%; padding: 0.5rem; border: 1px solid var(--border-color); border-radius: 8px;">
+                    <option>Any Grade</option>
+                    <option>Elementary (K-5)</option>
+                    <option>Middle School (6-8)</option>
+                    <option>High School (9-12)</option>
+                </select>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <label style="font-weight: 600; display: block; margin-bottom: 0.5rem;">Price Range ($/hr)</label>
+                <input type="range" min="10" max="100" style="width: 100%;">
+            </div>
+
+            <button class="btn btn-primary" style="width: 100%;">Apply Filters</button>
+        </aside>
+
+        <!-- TUTOR LISTINGS -->
+        <main class="tutor-listings">
+            <h2 style="margin-bottom: 2rem;">245 Tutors Available</h2>
+
+            <div class="grid" style="grid-template-columns: 1fr;">
+                <!-- Tutor Card 1 -->
+                <div class="card" style="display: flex; gap: 2rem; align-items: start;">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200"
+                        style="width: 150px; height: 150px; border-radius: var(--radius-sm); object-fit: cover;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; justify-content: space-between; align-items: start;">
+                            <div>
+                                <h3 style="margin-bottom: 0.5rem;">Sarah Johnson <span
+                                        style="color: var(--premium); font-size: 1rem;">✔️ Verified</span></h3>
+                                <div style="color: var(--text-secondary); margin-bottom: 1rem;">Expert Math & Physics
+                                    Tutor | 10 Years Exp.</div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary);">$45<span
+                                        style="font-size: 1rem; color: var(--text-secondary); font-weight: 400;">/hr</span>
+                                </div>
+                                <div style="color: var(--accent);">⭐⭐⭐⭐⭐ (124)</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem;">
+                            <span class="badge badge-primary">Mathematics</span>
+                            <span class="badge badge-secondary">Physics</span>
+                            <span class="badge"
+                                style="background: var(--bg-alt); border: 1px solid var(--border-color);">High
+                                School</span>
+                        </div>
+                        <div style="display: flex; gap: 1rem;">
+                            <a href="tutor-profile.html" class="btn btn-outline" style="padding: 0.5rem 1.5rem;">View
+                                Profile</a>
+                            <button class="btn btn-primary" style="padding: 0.5rem 1.5rem;">Book Trial Lesson</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tutor Card 2 -->
+                <div class="card" style="display: flex; gap: 2rem; align-items: start;">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&h=200"
+                        style="width: 150px; height: 150px; border-radius: var(--radius-sm); object-fit: cover;">
+                    <div style="flex: 1;">
+                        <div style="display: flex; justify-content: space-between; align-items: start;">
+                            <div>
+                                <h3 style="margin-bottom: 0.5rem;">David Chen <span
+                                        style="color: var(--premium); font-size: 1rem;">✔️ Verified</span></h3>
+                                <div style="color: var(--text-secondary); margin-bottom: 1rem;">Coding & STEM Educator |
+                                    Interactive Learning</div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary);">$55<span
+                                        style="font-size: 1rem; color: var(--text-secondary); font-weight: 400;">/hr</span>
+                                </div>
+                                <div style="color: var(--accent);">⭐⭐⭐⭐⭐ (89)</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem;">
+                            <span class="badge badge-primary">Python</span>
+                            <span class="badge badge-secondary">Scratch</span>
+                            <span class="badge"
+                                style="background: var(--bg-alt); border: 1px solid var(--border-color);">Middle
+                                School</span>
+                        </div>
+                        <div style="display: flex; gap: 1rem;">
+                            <a href="tutor-profile.html" class="btn btn-outline" style="padding: 0.5rem 1.5rem;">View
+                                Profile</a>
+                            <button class="btn btn-primary" style="padding: 0.5rem 1.5rem;">Book Trial Lesson</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- SECTION 2.5: WHY CHOOSE OUR TUTORS -->
+    <section class="why-choose section-alt" style="padding: 6rem 0;">
+        <div class="container text-center">
+            <h2 class="reveal" style="margin-bottom: 3rem;">Why Choose Our Tutors?</h2>
+            <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <div class="card reveal" style="padding: 2.5rem; border-top: 4px solid var(--primary);">
+                    <div style="margin-bottom: 1rem; color: var(--primary);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            style="width: 48px; height: 48px;">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Top 1% Educators</h3>
+                    <p style="color: var(--text-secondary);">We rigorously vet and accept only the most qualified and
+                        experienced teachers in their respective fields.</p>
+                </div>
+                <div class="card reveal" style="padding: 2.5rem; border-top: 4px solid var(--secondary);">
+                    <div style="margin-bottom: 1rem; color: var(--secondary);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            style="width: 48px; height: 48px;">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Personalized Approach</h3>
+                    <p style="color: var(--text-secondary);">Every student receives a custom learning plan tailored to
+                        their unique pace, strengths, and weaknesses.</p>
+                </div>
+                <div class="card reveal" style="padding: 2.5rem; border-top: 4px solid var(--accent-1);">
+                    <div style="margin-bottom: 1rem; color: var(--accent-1);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            style="width: 48px; height: 48px;">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Verified & Safe</h3>
+                    <p style="color: var(--text-secondary);">All our tutors pass comprehensive background checks to
+                        ensure a safe and secure learning environment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: BECOME A TUTOR CTA -->
+    <section class="cta-banner" style="padding: 6rem 5%; margin-bottom: 2rem;">
+        <div class="container card reveal"
+            style="background: var(--primary); color: #FFF; padding: 4rem; text-align: center; border-radius: 40px; box-shadow: var(--shadow-lg); border: none; overflow: hidden; position: relative;">
+            <!-- Abstract decorative elements in banner -->
+            <div
+                style="position: absolute; width: 300px; height: 300px; background: rgba(255,255,255,0.1); border-radius: 50%; top: -100px; left: -100px;">
+            </div>
+            <div class="cta-circle-bottom"
+                style="position: absolute; width: 200px; height: 200px; background: rgba(255,255,255,0.1); border-radius: 50%; bottom: -50px; right: -50px;">
+            </div>
+
+            <h2 style="color: #FFF; margin-bottom: 1.5rem; position: relative; z-index: 10;">Want to Join Our Platform?
+            </h2>
+            <p
+                style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 2.5rem; position: relative; z-index: 10;">
+                Share your expertise, set your own hours, and make a meaningful impact by teaching thousands of eager
+                students worldwide.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; position: relative; z-index: 10;">
+                <a href="register.html" class="btn btn-white">Apply Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: FAQ -->
+    <section class="faq section-alt" style="padding: 6rem 0;">
+        <div class="container">
+            <h2 class="text-center reveal" style="margin-bottom: 4rem;">Tutor FAQ</h2>
+            <div class="reveal" style="max-width: 800px; margin: 0 auto;">
+                <details class="card" style="margin-bottom: 1rem; cursor: pointer; padding: 1.5rem;">
+                    <summary
+                        style="font-weight: 600; font-size: 1.125rem; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        How do I schedule a lesson?
+                        <span style="color: var(--primary);">▼</span>
+                    </summary>
+                    <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.6;">Click "Book Trial
+                        Lesson" on any tutor's profile to view their real-time calendar availability. From there, you
+                        can select an open time slot that works best for your schedule and instantly confirm the
+                        booking.</p>
+                </details>
+                <details class="card" style="margin-bottom: 1rem; cursor: pointer; padding: 1.5rem;">
+                    <summary
+                        style="font-weight: 600; font-size: 1.125rem; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Are the tutors background-checked?
+                        <span style="color: var(--primary);">▼</span>
+                    </summary>
+                    <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.6;">Yes, absolutely. The
+                        safety of our students is our top priority. All verified tutors undergo rigorous identity
+                        verification and comprehensive criminal background checks before they are allowed to list their
+                        services on our platform.</p>
+                </details>
+                <details class="card" style="margin-bottom: 1rem; cursor: pointer; padding: 1.5rem;">
+                    <summary
+                        style="font-weight: 600; font-size: 1.125rem; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        What happens if I'm not satisfied with my tutor?
+                        <span style="color: var(--primary);">▼</span>
+                    </summary>
+                    <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.6;">We offer a 100%
+                        Satisfaction Guarantee on your first lesson. If you don't feel it's a good fit, we'll gladly
+                        refund your session or credit your account so you can try another tutor completely risk-free.
+                    </p>
+                </details>
+                <details class="card" style="margin-bottom: 1rem; cursor: pointer; padding: 1.5rem;">
+                    <summary
+                        style="font-weight: 600; font-size: 1.125rem; outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        What equipment do I need for online tutoring?
+                        <span style="color: var(--primary);">▼</span>
+                    </summary>
+                    <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.6;">You'll need a stable
+                        internet connection, a computer or tablet with a webcam, and a microphone. Our built-in digital
+                        classroom operates entirely in your web browser, so no special software downloads are required.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details[open] summary span {
+            transform: rotate(180deg);
+        }
+
+        details summary span {
+            transition: transform 0.3s ease;
+        }
+    </style>
+
+    <!-- SECTION 5: FOOTER -->
+    <!-- FOOTER -->
+    <footer style="padding: 5rem 0 2rem; background: #FFF; border-top: 1px solid var(--border-color);">
+        <div class="container footer-grid">
+            <!-- Col 1 -->
+            <div class="footer-col">
+                <a href="index.html"
+                    style="font-size: 1.75rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        style="width: 32px; height: 32px; color: var(--secondary);">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                    Tutor<span style="color: var(--text-primary)">Market</span>
+                </a>
+                <p>The premium destination for connecting K-12 students with world-class tutors.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg></a>
+                    <a href="#" class="social-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                            </path>
+                        </svg></a>
+                    <a href="#" class="social-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg></a>
+                </div>
+            </div>
+            <!-- Col 2 -->
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="tutors.html">Our Tutors</a></li>
+                    <li><a href="blog.html">Blog & News</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- Col 3 -->
+            <div class="footer-col">
+                <h4>Subjects</h4>
+                <ul>
+                    <li><a href="subjects.html">Mathematics</a></li>
+                    <li><a href="subjects.html">Science</a></li>
+                    <li><a href="subjects.html">English Literature</a></li>
+                    <li><a href="subjects.html">Coding for Kids</a></li>
+                </ul>
+            </div>
+            <!-- Col 4 -->
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container"
+            style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+            <p style="margin: 0;">&copy; 2026 TutorMarket. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
