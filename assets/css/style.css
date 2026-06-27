@@ -92,7 +92,8 @@ img {
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0 5%;
+    padding-left: max(1.25rem, calc(5% + env(safe-area-inset-left, 0px)));
+    padding-right: max(1.25rem, calc(5% + env(safe-area-inset-right, 0px)));
     position: relative;
 }
 
@@ -273,10 +274,12 @@ p {
     transition: var(--transition-normal);
     position: relative;
     overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-8px) translateZ(0);
     box-shadow: var(--shadow-hover);
     border-color: rgba(99, 102, 241, 0.2);
 }
@@ -608,6 +611,7 @@ section {
 .footer-col h4 {
     margin-bottom: 1.5rem;
     font-size: 1.25rem;
+    color: var(--text-primary);
 }
 
 .footer-col ul li {
@@ -828,6 +832,28 @@ section {
     .contact-form .grid {
         grid-template-columns: 1fr !important;
     }
+    .contact-form .card {
+        height: auto !important;
+    }
+
+    /* Equal Card Heights */
+    .tutor-card, .subject-card, .top-tutors .card, .subjects .card, .featured-courses .card {
+        height: 100%;
+        display: flex !important;
+        flex-direction: column;
+    }
+    .top-tutors .card > img, .subjects .card > img, .featured-courses .card > img, .tutor-card-img-wrapper, .tutor-card-img-wrapper img, .subject-card img {
+        height: 250px !important;
+        width: 100%;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+    .tutor-card-body, .top-tutors .card > div:not(.tutor-card-img-wrapper):not(.tutor-rating):not(.social-icons):not(.badge-container), .subjects .card > div:not(.tutor-card-img-wrapper):not(.tutor-rating):not(.social-icons):not(.badge-container) {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
 
     /* Hero Grid (1 col per row & center aligned) */
     .hero .grid {
@@ -839,9 +865,9 @@ section {
         justify-content: center;
     }
 
-    /* Home 1 - Top Tutors (1 card per row) */
+    /* Home 1 - Top Tutors (2 cards per row at tablet) */
     .top-tutors .grid {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 
     /* Home 1 - How TutorMarket Works (3rd card centered) */
@@ -856,10 +882,29 @@ section {
         max-width: 400px;
         width: 100%;
     }
-
-    /* Home 2 - The Smart Choice for K-12 (Heading min-height & 1 card per row) */
-    .why-choose-us .grid {
+    
+    /* Subject Page - How it works tab/mob view 1 card per row */
+    .how-it-works .grid {
         grid-template-columns: 1fr !important;
+    }
+
+    .top-tutors .grid > .card:nth-child(3) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: 400px;
+        width: 100%;
+    }
+
+    /* Home 2 - The Smart Choice for K-12 */
+    .why-choose-us .grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .why-choose-us .grid .card:nth-child(3) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: 400px;
+        width: 100%;
     }
 
     .why-choose-us .card h3 {
@@ -881,6 +926,10 @@ section {
     /* Home 2 - Transparent Pricing (1 card per row) */
     .pricing .grid {
         grid-template-columns: 1fr !important;
+    }
+    
+    .pricing .card ul {
+        text-align: center !important;
     }
 
     /* Home 2 - Our Impact (2 cols per row) */
@@ -1083,5 +1132,34 @@ section {
         width: 100% !important;
         justify-content: center !important;
         box-sizing: border-box !important;
+    }
+    
+    .tutor-listings .card>div>div:last-child {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.5rem !important;
+    }
+    .tutor-listings .card>div>div:last-child .btn {
+        width: 100% !important;
+        padding: 0.8rem !important;
+        min-height: 48px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    /* Contact Page Alignment Fix */
+    .contact-form + div .card ul li, .contact-form + div .card .social-icons {
+        justify-content: center !important;
+    }
+    .contact-form + div .card {
+        text-align: center !important;
+        border-left: none !important;
+        border-top: 4px solid var(--primary) !important;
+    }
+    
+    /* Home 2 - The Smart Choice for K-12 (1 card per row on mobile) */
+    .why-choose-us .grid {
+        grid-template-columns: 1fr !important;
     }
 }

@@ -16,6 +16,19 @@ body.dark-mode {
     --glass-bg: rgba(30, 41, 59, 0.85);
 }
 
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: var(--text-primary);
+}
+
+body.dark-mode .navbar {
+    background-color: var(--card-bg);
+}
+
 body.dark-mode .card {
     border-color: var(--border-color);
 }
@@ -47,5 +60,17 @@ body.dark-mode input:focus,
 body.dark-mode select:focus,
 body.dark-mode textarea:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+body.dark-mode .core-subjects .subject-card,
+body.dark-mode .specialized-subjects .subject-card {
+    background-color: var(--card-bg) !important;
+}
+
+body.dark-mode .core-subjects .subject-card:hover,
+body.dark-mode .specialized-subjects .subject-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    border-color: var(--border-color) !important;
 }

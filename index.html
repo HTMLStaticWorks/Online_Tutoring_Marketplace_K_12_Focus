@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,6 +13,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
 
 <body>
@@ -90,14 +92,6 @@
             </ul>
 
             <div class="nav-actions" style="display: flex; gap: 1rem; align-items: center;">
-                <button id="darkModeToggle" class="btn-icon-only"
-                    style="background: transparent; border: none; cursor: pointer; color: var(--text-primary);"
-                    aria-label="Dark Mode">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        style="width: 24px; height: 24px;">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                </button>
                 <a href="dashboard.html" class="btn-icon-only"
                     style="background: transparent; border: none; cursor: pointer; color: var(--text-primary); display: flex; align-items: center; justify-content: center;"
                     aria-label="Dashboard">
@@ -109,6 +103,14 @@
                         <rect x="3" y="14" width="7" height="7"></rect>
                     </svg>
                 </a>
+                <button id="darkModeToggle" class="btn-icon-only"
+                    style="background: transparent; border: none; cursor: pointer; color: var(--text-primary);"
+                    aria-label="Dark Mode">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        style="width: 24px; height: 24px;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
                 <button id="rtlToggle" class="btn-icon-only"
                     style="background: transparent; border: none; cursor: pointer; color: var(--text-primary);"
                     aria-label="Toggle RTL">
@@ -150,7 +152,7 @@
 
                 <!-- Search Interface Pill -->
                 <div class="search-interface glass-panel"
-                    style="display: flex; align-items: center; background: #FFF; padding: 0.5rem; border-radius: var(--radius-pill); margin-bottom: 3rem; box-shadow: var(--shadow-lg);">
+                    style="display: flex; align-items: center; background: var(--bg-color); padding: 0.5rem; border-radius: var(--radius-pill); margin-bottom: 3rem; box-shadow: var(--shadow-lg);">
                     <div style="flex: 1; padding: 0 1.5rem; border-right: 1px solid var(--border-color);">
                         <select
                             style="width: 100%; border: none; outline: none; background: transparent; font-family: var(--font-main); font-weight: 600; color: var(--text-primary); font-size: 1rem;">
@@ -221,7 +223,7 @@
     </header>
 
     <!-- COUNTERS SECTION -->
-    <section class="stats" style="padding: 4rem 0; background: #FFF; border-bottom: 1px solid var(--border-color);">
+    <section class="stats" style="padding: 4rem 0; background: var(--bg-color); border-bottom: 1px solid var(--border-color);">
         <div class="container grid" style="grid-template-columns: repeat(4, 1fr); text-align: center;">
             <div class="counter-box reveal">
                 <h3>250+</h3>
@@ -600,7 +602,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer style="padding: 5rem 0 2rem; background: #FFF; border-top: 1px solid var(--border-color);">
+    <footer style="padding: 5rem 0 2rem; background: var(--bg-color); border-top: 1px solid var(--border-color);">
         <div class="container footer-grid">
             <!-- Col 1 -->
             <div class="footer-col">
