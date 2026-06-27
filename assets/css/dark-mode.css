@@ -29,6 +29,10 @@ body.dark-mode .navbar {
     background-color: var(--card-bg);
 }
 
+body.dark-mode header.hero {
+    background: var(--bg-alt) !important;
+}
+
 body.dark-mode .card {
     border-color: var(--border-color);
 }
