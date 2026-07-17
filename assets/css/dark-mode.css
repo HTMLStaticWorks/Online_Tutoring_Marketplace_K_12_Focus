@@ -68,6 +68,7 @@ body.dark-mode textarea:focus {
 }
 
 body.dark-mode .core-subjects .subject-card,
+body.dark-mode .popular-subjects-no-hover .subject-card,
 body.dark-mode .specialized-subjects .subject-card {
     background-color: var(--card-bg) !important;
 }
@@ -77,4 +78,13 @@ body.dark-mode .specialized-subjects .subject-card:hover {
     transform: none !important;
     box-shadow: none !important;
     border-color: var(--border-color) !important;
+}
+
+body.dark-mode .tutor-rating {
+    background: var(--bg-alt);
+    color: var(--text-primary);
+}
+
+body.dark-mode .btn-white {
+    color: var(--bg-color);
 }

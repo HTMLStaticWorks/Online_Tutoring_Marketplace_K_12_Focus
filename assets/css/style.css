@@ -1070,6 +1070,7 @@ section {
 
     /* Home 2 - Featured Learning Pathways (1 card per row) */
     .featured-courses .grid,
+    .top-tutors .grid,
     .subjects .grid {
         grid-template-columns: 1fr !important;
     }
